@@ -2,14 +2,42 @@ from flask import request, jsonify, abort, Blueprint
 from model.user import User
 from persistence.DataManager import DataManager
 from db import db
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity, get_jwt
 
 
-user_manager_blueprint = Blueprint('user_manager', __name__)
+user_manager_blueprint = Blueprint('user_manager_blueprint', __name__)
 data_manager = DataManager()
 
 
+@user_manager_blueprint.route('/login', methods=['POST'])
+def login():
+    if not request.json or 'email' not in request.json or 'password' not in request.json:
+        abort(400, description="Missing required fields")
+
+    email = request.json['email']
+    password = request.json['password']
+
+    user = User.query.filter_by(email=email).first()
+
+    if user is None:
+        abort(401, description="User not found")
+
+    if not user.check_password(password):
+        abort(401, description="Invalid password")
+
+    access_token = create_access_token(identity=email)
+    return jsonify(access_token=access_token), 200
+
+    # return jsonify({"message": "login was successful"}), 200
+
+
 @user_manager_blueprint.route('/users', methods=['POST'])
+@jwt_required()
 def create_user():
+    claims = get_jwt_identity()
+    if not claims.get('is_admin'):
+        abort(403, description="Admin rights required")
+
     if not request.json or 'email' not in request.json or 'password' not in request.json:
         abort(400, description="Missing required fields")
 
