@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo-image">
+            <a href="index.html">
+                <img src="logo.png" alt="Hbnb Evolution">
+            </a>
+            </div>
+            <div class="login-button" id="login-link">
+                <nav>
+                    <a href="login.html">
+                        <button>Login</button>
+                    </a>
+                </nav>
+            </div>
+    </header>
+
+    <main class="place-details">
+        <div class="place-image-large">
+            <img src="image.png" alt="">
+        </div>
+        <div class="place-info">
+            <h1>Place Name</h1>
+            <p><strong>Host:</strong> HOST NAME</p>
+            <p><strong>Price:</strong> $100 per night</p>
+            <p><strong>Location:</strong> Culebra, PR</p>
+            <p><strong>Description:</strong> Linda casa de playa con muelle privado en el agua.</p>
+            <p><strong>Amenities:</strong> wifi - agua caliente - cama para 6 personas.</p>
+        </div>
+
+        <section class="reviews">
+            <h2>Reviews</h2>
+            <!-- Repeat this div for each review -->
+            <div class="review-card">
+                <p>"Review comment here"</p>
+                <p><strong>User:</strong> User Name</p>
+                <p><strong>Rating:</strong> ★★★★☆</p>
+            </div>
+        </section>
+        <!-- Check if user is logged in to show this part -->
+        <div class="add-review">
+            <h2>Add a Review</h2>
+            <form action="submit-review-url" method="post">
+                <textarea name="review" required></textarea>
+                <input type="submit" value="Submit Review">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Hbnb Evolution. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

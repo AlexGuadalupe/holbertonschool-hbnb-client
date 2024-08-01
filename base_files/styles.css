@@ -1,0 +1,175 @@
+/* connect with file index.html con relacion a lo general*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #a0f5f8;
+    color: #4a5a5e;
+}
+
+header {
+    background-color: #0eb5bb;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 5px rgba(45, 121, 111, 0.822));
+}
+
+.logo {
+    margin: 0.5px;
+    padding: 0.5px;
+    height: 54px;
+    width: 30px;
+    filter: drop-shadow(0px 0px 5px #ffffff);
+}
+
+.login-button {
+    position: absolute;
+    right: 0;
+    margin: -50px 20px;
+}
+
+.login-button button {
+    font-size: large;
+    background-color: #0eb5bb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+#login-form button {
+    font-size: medium;
+    background-color: #0eb5bb;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+
+footer {
+    background-color: #0eb5bb;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.822));
+}
+
+footer p {
+    margin: 0;
+    padding: auto;
+    text-align: center;
+    color: #ffffff;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* conect with file index.html */
+#places-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#places-list img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.Place.culebra {
+    border: 2px solid #0eb5bb; /* Borde negro sólido de 2px */
+    padding: 25px; /* Espacio interior de 20px */
+    margin: 25px 0; /* Margen superior e inferior de 10px, izquierda y derecha de 0 */
+    background-color: #d4feff; /* Color de fondo gris claro */
+    box-shadow: 0 2px 4px #000000; /* Sombra suave para dar efecto de profundidad */
+}
+.Place.glamping {
+    border: 2px solid #0eb5bb; /* Borde negro sólido de 2px */
+    padding: 25px; /* Espacio interior de 20px */
+    margin: 25px 0; /* Margen superior e inferior de 10px, izquierda y derecha de 0 */
+    background-color: #d4feff; /* Color de fondo gris claro */
+    box-shadow: 0 2px 4px #000000; /* Sombra suave para dar efecto de profundidad */
+}
+.Place.vsj {
+    border: 2px solid #0eb5bb; /* Borde negro sólido de 2px */
+    padding: 25px; /* Espacio interior de 20px */
+    margin: 25px 0; /* Margen superior e inferior de 10px, izquierda y derecha de 0 */
+    background-color: #d4feff; /* Color de fondo gris claro */
+    box-shadow: 0 2px 4px #000000; /* Sombra suave para dar efecto de profundidad */
+}
+
+.Place button {
+    margin-top: 20px; /* Aumenta el espacio por encima del botón */ /* Resto de las propiedades */
+    background-color: #0eb5bb; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Eliminar el borde predeterminado */
+    padding: 10px 20px; /* Espacio interior para hacer el botón más grande */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor a una mano cuando se pasa sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+    box-shadow: 0 2px 4px #000000; /* Sombra suave para dar efecto de profundidad */
+}
+
+.Place button:hover {
+    background-color: #099ca5; /* Cambiar el color de fondo al pasar el mouse */
+}
+
+
+
+/* conect con file place.html*/
+.place-details {
+    /* Estilos para la sección de detalles del lugar */
+}
+.place-image-large img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.place-info {
+    margin-top: 20px;
+}
+
+.review-card {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.add-review form {
+    margin-top: 20px;
+}
+
+
+div {
+    unicode-bidi: isolate;
+}
